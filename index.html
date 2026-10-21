@@ -2,1079 +2,973 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8EMKQKX4S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8EMKQKX4S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L8EMKQKX4S');
+    </script>
 
-  gtag('config', 'G-L8EMKQKX4S');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Ishani's Dental and Cosmetic Clinic - Best Dentist in Nagpur</title>
-    <meta name="description" content="Expert dental and cosmetic care in Dharampeth, Nagpur. Dr. Ishani Chavan - Dental Surgeon & Cosmetologist. Specialized in dental implants, aligners, skin & hair treatments.">
+    <title>Dr. Ishani's Dental & Cosmetic Clinic | Best Dentist in Dharampeth, Nagpur</title>
+    <meta name="description" content="Dr. Ishani Nilajkar (BDS, MBA, Diploma in Clinical Cosmetology) - dental implants, braces, root canal, teeth whitening, laser hair removal, hydrafacial and skin treatments in Dharampeth, Nagpur. Open daily 10 AM to 9 PM.">
+    <meta property="og:title" content="Dr. Ishani's Dental & Cosmetic Clinic - Dharampeth, Nagpur">
+    <meta property="og:description" content="Dental, implant, skin, hair and laser care under one roof. Book on WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0284C7">
+
+    <!-- Local business data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Dr. Ishani's Dental & Cosmetic Clinic",
+      "image": "images/clinic-exterior.jpg",
+      "telephone": "+917020232838",
+      "email": "drishanidentalclinic@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop no 383, near Shyam Medical, Traffic Park Square, Dharampeth",
+        "addressLocality": "Nagpur",
+        "addressRegion": "Maharashtra",
+        "postalCode": "440010",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:00",
+        "closes": "21:00"
+      },
+      "medicalSpecialty": "Dentistry"
+    }
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
         :root {
             --primary: #0EA5E9;
             --primary-dark: #0284C7;
-            --secondary: #10B981;
-            --accent: #FF6B6B;
+            --navy: #0B2545;
+            --accent: #F43F5E;
             --dark: #1E293B;
-            --light: #F8FAFC;
-            --text: #334155;
+            --light: #F1F7FB;
+            --text: #475569;
             --white: #FFFFFF;
+            --wa: #25D366;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.65;
             color: var(--text);
             overflow-x: hidden;
         }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            z-index: 10000;
-            animation: pulse 2s infinite;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; }
 
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
-            }
-            100% {
-                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            }
-        }
-
-        /* WhatsApp Popup */
-        .whatsapp-popup {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            z-index: 9999;
-            max-width: 300px;
-            display: none;
-            animation: slideUp 0.3s ease;
-        }
-
-        .whatsapp-popup.show {
-            display: block;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text);
-        }
-
-        .popup-content h3 {
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
             color: var(--dark);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.25;
+        }
+        .section-subtitle {
+            text-align: center;
+            margin: 0 auto 3rem;
+            max-width: 640px;
+            font-size: 1.05rem;
+        }
+        .eyebrow {
+            display: block;
+            text-align: center;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
         }
 
-        .popup-content p {
-            color: var(--text);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .popup-btn {
-            background: #25D366;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
+        /* Buttons */
+        .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: 10px;
             font-weight: 600;
-            transition: all 0.3s;
+            text-decoration: none;
             border: none;
             cursor: pointer;
-            width: 100%;
-            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.25s;
         }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(14,165,233,.35); }
+        .btn-wa { background: var(--wa); color: #fff; }
+        .btn-wa:hover { background: #1fb457; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37,211,102,.4); }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7); }
+        .btn-outline:hover { background: #fff; color: var(--primary-dark); }
 
-        .popup-btn:hover {
-            background: #20BA5A;
-            transform: translateY(-2px);
+        /* Top bar */
+        .topbar {
+            background: var(--navy);
+            color: #cfe3f5;
+            font-size: 0.85rem;
+            padding: 0.45rem 0;
         }
+        .topbar .container { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        .topbar a { text-decoration: none; }
 
         /* Header */
         header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,.08);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-
         nav {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 0.7rem 1.5rem;
         }
+        .logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+        .logo img { height: 48px; width: auto; border-radius: 6px; }
+        .logo-text { font-weight: 800; color: var(--navy); line-height: 1.15; font-size: 1.05rem; }
+        .logo-text small { display: block; font-weight: 500; color: var(--text); font-size: 0.72rem; letter-spacing: .5px; }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+        .nav-links { display: flex; list-style: none; gap: 1.8rem; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color .25s; }
+        .nav-links a:hover { color: var(--primary); }
+        .menu-toggle { display: none; font-size: 1.6rem; background: none; border: none; color: var(--dark); cursor: pointer; }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .cta-btn {
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
-        }
-
-        /* Hero Section */
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
-            color: var(--white);
-            padding: 4rem 2rem;
-            text-align: center;
+            background: linear-gradient(135deg, #0B2545 0%, #0284C7 100%);
+            color: #fff;
+            padding: 4.5rem 0 5rem;
+            position: relative;
+            overflow: hidden;
         }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 520px; height: 520px;
+            right: -140px; top: -160px;
+            background: radial-gradient(circle, rgba(255,255,255,.16), transparent 70%);
+            border-radius: 50%;
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.1s both;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.4s both;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
-            background: var(--light);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card h3 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-        }
-
-        .service-card p {
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Categories */
-        .service-categories {
-            max-width: 1200px;
-            margin: 3rem auto 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .category-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
-        }
-
-        .category-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            display: flex;
             align-items: center;
-            gap: 0.5rem;
+            position: relative;
+            z-index: 1;
         }
-
-        .category-card ul {
-            list-style: none;
-            padding-left: 0;
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,.14);
+            border: 1px solid rgba(255,255,255,.3);
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 1.2rem;
         }
-
-        .category-card li {
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .category-card li:before {
-            content: "✓";
-            font-weight: bold;
-        }
-
-        /* Why Choose Us */
-        .why-choose {
-            padding: 5rem 2rem;
-            background: var(--white);
-        }
-
-        .features-grid {
-            max-width: 1200px;
-            margin: 3rem auto 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-item h3 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 5rem 2rem;
-            background: var(--light);
-        }
-
-        .testimonials-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-rating {
-            color: #F59E0B;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .testimonial-author {
+        .hero h1 { font-size: 3.1rem; line-height: 1.15; margin-bottom: 1rem; }
+        .hero h1 span { color: #7DD3FC; }
+        .hero .marathi { font-size: 1.15rem; opacity: .95; margin-bottom: 0.4rem; font-weight: 600; }
+        .hero p.lead { font-size: 1.12rem; opacity: .92; margin-bottom: 1.8rem; max-width: 560px; }
+        .hero-cta { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .hero-creds { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+        .cred-chip {
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.25);
+            padding: 0.3rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: var(--dark);
         }
-
-        .testimonial-location {
-            font-size: 0.9rem;
-            color: var(--text);
-            opacity: 0.8;
+        .hero-photo { position: relative; justify-self: center; width: 100%; max-width: 400px; }
+        .hero-photo img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: 40% 30%;
+            border-radius: 24px;
+            border: 5px solid rgba(255,255,255,.25);
+            box-shadow: 0 24px 50px rgba(0,0,0,.35);
+            background: #cfe8f7;
         }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: var(--white);
+        .hero-photo .tag {
+            position: absolute;
+            bottom: -18px; left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: var(--navy);
+            padding: 0.7rem 1.3rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(0,0,0,.2);
+            text-align: center;
+            white-space: nowrap;
         }
+        .hero-photo .tag strong { display: block; font-size: 1rem; }
+        .hero-photo .tag span { font-size: 0.78rem; color: var(--text); }
 
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
+        /* Stats strip */
+        .stats-strip { background: #fff; margin-top: -2.2rem; position: relative; z-index: 2; padding: 0; }
+        .stats-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 12px 34px rgba(11,37,69,.14);
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 1.6rem 1rem;
         }
+        .stat { text-align: center; padding: 0.4rem 0.8rem; border-right: 1px solid #e5eef5; }
+        .stat:last-child { border-right: none; }
+        .stat b { display: block; font-size: 1.7rem; color: var(--primary-dark); line-height: 1.2; }
+        .stat span { font-size: 0.85rem; }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+        /* About */
+        .about { background: #fff; padding-top: 6rem; }
+        .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; align-items: center; }
+        .about-photo img {
+            width: 100%;
+            border-radius: 22px;
+            box-shadow: 0 16px 36px rgba(0,0,0,.16);
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            object-position: 40% 35%;
+            background: #cfe8f7;
         }
-
-        .contact-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+        .about-text h2 { font-size: 2.3rem; color: var(--dark); line-height: 1.2; margin-bottom: 0.4rem; }
+        .about-text .role { color: var(--primary-dark); font-weight: 700; margin-bottom: 1.2rem; }
+        .about-text p { margin-bottom: 1rem; }
+        .cred-list { list-style: none; margin: 1.4rem 0 1.8rem; display: grid; gap: 0.7rem; }
+        .cred-list li {
+            display: flex; gap: 0.8rem; align-items: flex-start;
+            background: var(--light);
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
         }
+        .cred-list .ic { font-size: 1.4rem; }
+        .cred-list strong { color: var(--dark); display: block; line-height: 1.3; }
+        .cred-list small { font-size: 0.85rem; }
 
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--primary);
+        /* Services */
+        .services { background: var(--light); }
+        .service-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.6rem; margin-bottom: 2.5rem; }
+        .category-card {
+            border-radius: 18px;
+            padding: 2rem;
+            color: #fff;
         }
+        .category-card.dental { background: linear-gradient(135deg, #0EA5E9, #0369A1); }
+        .category-card.cosmetic { background: linear-gradient(135deg, #F43F5E, #BE185D); }
+        .category-card h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+        .category-card ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
+        .category-card li { font-size: 0.95rem; }
+        .category-card li::before { content: "✓ "; font-weight: 700; }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; }
+        .service-card {
+            background: #fff;
+            padding: 1.7rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0,0,0,.06);
+            transition: all .3s;
+            border-top: 4px solid var(--primary);
         }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 14px 30px rgba(0,0,0,.12); }
+        .service-card .icon { font-size: 2.3rem; margin-bottom: 0.6rem; }
+        .service-card h3 { color: var(--dark); margin-bottom: 0.4rem; font-size: 1.2rem; }
+        .service-card p { font-size: 0.95rem; }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
+        /* Gallery */
+        .gallery { background: #fff; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+        .gallery-grid figure { overflow: hidden; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+        .gallery-grid img { width: 100%; height: 280px; object-fit: cover; transition: transform .5s; }
+        .gallery-grid figure:hover img { transform: scale(1.06); }
+
+        /* Results */
+        .results { background: var(--light); }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.6rem; max-width: 900px; margin: 0 auto; }
+        .results-grid figure { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,.1); }
+        .results-grid img { width: 100%; height: auto; }
+        .results-note { text-align: center; font-size: 0.8rem; margin-top: 1.2rem; opacity: .8; }
+
+        /* Why us */
+        .why { background: #fff; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.4rem; }
+        .feature {
+            text-align: center;
+            padding: 1.8rem 1.3rem;
+            background: var(--light);
+            border-radius: 16px;
+            transition: all .3s;
         }
+        .feature:hover { transform: translateY(-5px); box-shadow: 0 10px 22px rgba(0,0,0,.09); }
+        .feature .icon { font-size: 2.6rem; margin-bottom: 0.7rem; }
+        .feature h3 { color: var(--dark); margin-bottom: 0.4rem; }
 
-        .form-group label {
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-            font-weight: 500;
+        /* Process */
+        .process { background: linear-gradient(135deg, #0B2545, #0284C7); color: #fff; }
+        .process .section-title { color: #fff; }
+        .process .section-subtitle { color: #cfe3f5; }
+        .process .eyebrow { color: #7DD3FC; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.4rem; }
+        .step { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 16px; padding: 1.6rem; }
+        .step .num {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: #fff; color: var(--primary-dark);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; margin-bottom: 0.9rem;
         }
+        .step h3 { margin-bottom: 0.3rem; }
+        .step p { font-size: 0.93rem; color: #dbeafe; }
 
-        .form-group input,
-        .form-group textarea {
+        /* Reviews */
+        .reviews { background: var(--light); text-align: center; }
+        .review-box {
+            max-width: 720px; margin: 0 auto;
+            background: #fff; border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 28px rgba(0,0,0,.09);
+        }
+        .review-box .stars { color: #F59E0B; font-size: 2rem; letter-spacing: 4px; }
+        .review-box h3 { color: var(--dark); font-size: 1.6rem; margin: 0.4rem 0; }
+        .review-box p { margin-bottom: 1.5rem; }
+
+        /* FAQ */
+        .faq { background: #fff; }
+        .faq-list { max-width: 820px; margin: 0 auto; display: grid; gap: 0.9rem; }
+        details { background: var(--light); border-radius: 12px; padding: 1.1rem 1.3rem; }
+        summary { cursor: pointer; font-weight: 600; color: var(--dark); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; font-size: 1.4rem; line-height: 1; color: var(--primary-dark); }
+        details[open] summary::after { content: "−"; }
+        details p { margin-top: 0.8rem; }
+
+        /* Contact */
+        .contact { background: var(--light); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+        .info-card, .form-card { background: #fff; border-radius: 18px; padding: 2rem; box-shadow: 0 8px 22px rgba(0,0,0,.07); }
+        .contact-item { display: flex; gap: 1rem; margin-bottom: 1.3rem; }
+        .contact-item .ic { font-size: 1.5rem; }
+        .contact-item h3 { color: var(--dark); font-size: 1.05rem; }
+        .contact-item a { text-decoration: none; }
+        .contact-item a:hover { color: var(--primary-dark); }
+        .map-wrap { margin-top: 1rem; border-radius: 14px; overflow: hidden; }
+        .map-wrap iframe { width: 100%; height: 240px; border: 0; display: block; }
+
+        .form-card h3 { color: var(--dark); font-size: 1.4rem; margin-bottom: 1.2rem; }
+        .form-group { display: flex; flex-direction: column; margin-bottom: 1rem; }
+        .form-group label { margin-bottom: 0.35rem; color: var(--dark); font-weight: 500; font-size: 0.93rem; }
+        .form-group input, .form-group textarea, .form-group select {
             padding: 0.75rem;
             border: 2px solid #E2E8F0;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            font-family: inherit;
+            transition: border-color .25s;
+            background: #fff;
         }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
 
         /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 3rem 2rem 1rem;
-        }
+        footer { background: var(--navy); color: #fff; padding: 3.5rem 0 5.5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-grid h3 { color: #7DD3FC; margin-bottom: 0.8rem; font-size: 1.05rem; }
+        .footer-grid ul { list-style: none; }
+        .footer-grid li { margin-bottom: 0.3rem; }
+        .footer-grid a { text-decoration: none; opacity: .85; font-size: 0.95rem; }
+        .footer-grid a:hover { opacity: 1; }
+        .footer-grid p { font-size: 0.95rem; opacity: .85; }
+        .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.12); font-size: 0.85rem; opacity: .75; }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+        /* WhatsApp floating + popup */
+        .wa-float {
+            position: fixed; bottom: 26px; right: 26px;
+            width: 62px; height: 62px; border-radius: 50%;
+            background: var(--wa); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.9rem; text-decoration: none;
+            z-index: 10000;
+            animation: pulse 2s infinite;
+            box-shadow: 0 6px 16px rgba(37,211,102,.45);
         }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.55); }
+            70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
         }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .footer-section a:hover {
-            opacity: 1;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            opacity: 0.8;
-        }
-
-        /* Mobile Menu */
-        .menu-toggle {
+        .wa-popup {
+            position: fixed; bottom: 104px; right: 26px;
+            width: 310px; background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 14px 38px rgba(0,0,0,.22);
+            z-index: 9999; overflow: hidden;
             display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--dark);
-            cursor: pointer;
         }
+        .wa-popup.show { display: block; animation: slideUp .35s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .wa-head { background: var(--wa); color: #fff; padding: 0.9rem 1.1rem; display: flex; align-items: center; gap: 0.7rem; }
+        .wa-head .av { width: 40px; height: 40px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+        .wa-head strong { display: block; line-height: 1.2; }
+        .wa-head small { opacity: .9; font-size: 0.78rem; }
+        .wa-body { padding: 1.1rem; }
+        .wa-bubble { background: #ECFDF5; border-radius: 0 12px 12px 12px; padding: 0.7rem 0.9rem; font-size: 0.92rem; margin-bottom: 1rem; color: var(--dark); }
+        .wa-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        /* Mobile action bar */
+        .mobile-bar { display: none; }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
         /* Responsive */
+        @media (max-width: 900px) {
+            .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero { padding: 3rem 0 4.5rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-photo { max-width: 300px; order: -1; }
+            .stats-card { grid-template-columns: repeat(2, 1fr); gap: 1rem 0; }
+            .stat:nth-child(2) { border-right: none; }
+            .category-card ul { grid-template-columns: 1fr; }
+        }
         @media (max-width: 768px) {
+            .topbar .container > span:last-child { display: none; }
+            .menu-toggle { display: block; }
             .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                flex-direction: column;
-                padding: 2rem;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                display: none; position: absolute; top: 100%; left: 0; width: 100%;
+                background: #fff; flex-direction: column; gap: 0;
+                padding: 0.5rem 1.5rem 1rem; box-shadow: 0 8px 16px rgba(0,0,0,.1);
             }
+            .nav-links.active { display: flex; }
+            .nav-links li { padding: 0.7rem 0; border-bottom: 1px solid #eef3f7; }
+            nav > .btn { display: none; }
+            section { padding: 3.5rem 0; }
+            .section-title { font-size: 1.8rem; }
+            .about-text h2 { font-size: 1.8rem; }
 
-            .nav-links.active {
-                display: flex;
+            .wa-float { bottom: 82px; right: 16px; width: 54px; height: 54px; font-size: 1.6rem; }
+            .wa-popup { right: 14px; left: 14px; width: auto; bottom: 150px; }
+            .mobile-bar {
+                display: grid; grid-template-columns: 1fr 1fr;
+                position: fixed; bottom: 0; left: 0; right: 0; z-index: 9990;
+                box-shadow: 0 -4px 14px rgba(0,0,0,.15);
             }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .hero p {
-                font-size: 0.95rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .service-categories {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .whatsapp-popup {
-                right: 20px;
-                bottom: 80px;
-                max-width: calc(100% - 40px);
-            }
+            .mobile-bar a { padding: 0.95rem; text-align: center; font-weight: 700; text-decoration: none; color: #fff; }
+            .mobile-bar .call { background: var(--primary-dark); }
+            .mobile-bar .wa { background: var(--wa); }
         }
     </style>
 </head>
 <body>
+
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" 
-       class="whatsapp-float" 
-       target="_blank"
-       id="whatsappBtn"
-       title="Book on WhatsApp">
-        💬
-    </a>
+    <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" class="wa-float" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
 
     <!-- WhatsApp Popup -->
-    <div class="whatsapp-popup" id="whatsappPopup">
-        <button class="popup-close" onclick="closePopup()">×</button>
-        <div class="popup-content">
-            <h3>📱 Book Your Appointment</h3>
-            <p>Chat with us on WhatsApp for instant booking and queries!</p>
-            <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" 
-               class="popup-btn" 
-               target="_blank">
-                💬 Chat on WhatsApp
-            </a>
+    <div class="wa-popup" id="waPopup">
+        <button class="wa-close" onclick="closePopup()" aria-label="Close">×</button>
+        <div class="wa-head">
+            <div class="av">🦷</div>
+            <div>
+                <strong>Dr. Ishani's Clinic</strong>
+                <small>● Online · Replies quickly</small>
+            </div>
+        </div>
+        <div class="wa-body">
+            <div class="wa-bubble">👋 Hello! Want to book an appointment or ask about a treatment? Chat with us on WhatsApp.</div>
+            <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-wa" style="width:100%;" target="_blank" rel="noopener">💬 Start Chat on WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Mobile action bar -->
+    <div class="mobile-bar">
+        <a class="call" href="tel:+917057394624">📞 Call Now</a>
+        <a class="wa" href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+
+    <!-- Top bar -->
+    <div class="topbar">
+        <div class="container">
+            <span>📍 Traffic Park Square, Dharampeth, Nagpur</span>
+            <span>⏰ Open Daily: 10 AM – 9 PM &nbsp;|&nbsp; <a href="tel:+917020232838">📞 +91 70202 32838</a></span>
         </div>
     </div>
 
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">
-                🦷 Dr. Ishani's Dental Clinic
-            </div>
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="Dr. Ishani's Dental & Cosmetic Clinic logo" onerror="this.style.display='none'">
+                <span class="logo-text">Dr. Ishani's<small>DENTAL &amp; COSMETIC CLINIC</small></span>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" 
-               class="cta-btn" 
-               target="_blank">Book on WhatsApp</a>
+            <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-wa" target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Dr. Ishani's Dental & Cosmetic Clinic</h1>
-            <p class="subtitle">Dr. Ishani Nilajkar - Dental Surgeon & Cosmetologist</p>
-            <p>दांताचा दवाखाना | Expert Care in Dental | Implant | Skin | Hair | Laser</p>
-            <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" 
-               class="cta-btn" 
-               target="_blank"
-               style="display: inline-block; font-size: 1.1rem; padding: 1rem 2rem;">
-                💬 Book Free Consultation on WhatsApp
-            </a>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">5000+</span>
-                    <span class="stat-label">Happy Patients</span>
+        <div class="container hero-grid">
+            <div>
+                <span class="hero-badge">⭐ 5-Star Rated · Serving Dharampeth, Nagpur</span>
+                <h1>Healthy Teeth. <span>Glowing Skin.</span> Confident You.</h1>
+                <p class="marathi">दातांचा दवाखाना</p>
+                <p class="lead">Complete dental, implant, skin, hair and laser care under one roof, with gentle treatment by Dr. Ishani Nilajkar.</p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani's%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-wa" target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+                    <a href="tel:+917057394624" class="btn btn-outline">📞 Call Clinic</a>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">5★</span>
-                    <span class="stat-label">Google Rating</span>
+                <div class="hero-creds">
+                    <span class="cred-chip">🎓 BDS</span>
+                    <span class="cred-chip">🎓 MBA</span>
+                    <span class="cred-chip">🎓 Diploma in Clinical Cosmetology</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">10 AM - 9 PM</span>
-                    <span class="stat-label">Daily Open</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">0%</span>
-                    <span class="stat-label">EMI Available</span>
+            </div>
+            <div class="hero-photo">
+                <img src="images/doctor.jpg" alt="Dr. Ishani Nilajkar - Dental Surgeon and Cosmetologist, Nagpur">
+                <div class="tag">
+                    <strong>Dr. Ishani Nilajkar</strong>
+                    <span>Dental Surgeon &amp; Cosmetologist</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Stats -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-card">
+                <div class="stat"><b>1+ Year</b><span>Trusted in Dharampeth</span></div>
+                <div class="stat"><b>5★</b><span>Google Rating</span></div>
+                <div class="stat"><b>10 AM–9 PM</b><span>Open All 7 Days</span></div>
+                <div class="stat"><b>Dental + Skin</b><span>Under One Roof</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-photo">
+                <img src="images/doctor.jpg" alt="Dr. Ishani Nilajkar at her clinic in Dharampeth, Nagpur" loading="lazy">
+            </div>
+            <div class="about-text">
+                <span class="eyebrow" style="text-align:left;">Meet Your Doctor</span>
+                <h2>Dr. Ishani Nilajkar</h2>
+                <p class="role">Dental Surgeon &amp; Cosmetologist</p>
+                <p>Dr. Ishani combines clinical dentistry with aesthetic care, so you can fix your smile, your skin and your hair at one trusted clinic. Her focus is simple: honest advice, gentle hands and results you can see.</p>
+                <p>For over a year, patients across Dharampeth and Nagpur have trusted our clinic for everything from routine cleaning to implants, braces, laser treatments and facials.</p>
+                <ul class="cred-list">
+                    <li><span class="ic">🦷</span><div><strong>BDS – Bachelor of Dental Surgery</strong><small>Qualified dental surgeon</small></div></li>
+                    <li><span class="ic">✨</span><div><strong>Diploma in Clinical Cosmetology</strong><small>Skin, hair and laser treatments</small></div></li>
+                    <li><span class="ic">📊</span><div><strong>MBA</strong><small>Transparent, patient-friendly clinic management</small></div></li>
+                </ul>
+                <a href="https://wa.me/917020232838?text=Hello%20Dr.%20Ishani,%20I%20would%20like%20to%20book%20a%20consultation" class="btn btn-primary" target="_blank" rel="noopener">Book a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
     <section class="services" id="services">
-        <h2 class="section-title">Our Comprehensive Services</h2>
-        <p class="section-subtitle">Complete dental and cosmetic care under one roof</p>
-        
-        <div class="service-categories">
-            <div class="category-card">
-                <h3>🦷 Dental Services</h3>
-                <ul>
-                    <li>Teeth Whitening</li>
-                    <li>Teeth Cleaning & Polishing</li>
-                    <li>Dental Implants</li>
-                    <li>Root Canal Treatment</li>
-                    <li>Crown & Bridges</li>
-                    <li>Dentures (Full & Partial)</li>
-                    <li>Braces & Clear Aligners</li>
-                    <li>Fixed Bridges</li>
-                    <li>Tooth Fillings</li>
-                    <li>Child Dentistry</li>
-                </ul>
-            </div>
-            
-            <div class="category-card" style="background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);">
-                <h3>✨ Cosmetic Treatments</h3>
-                <ul>
-                    <li>Chemical Peels</li>
-                    <li>Micro Needling</li>
-                    <li>Hydrafacial</li>
-                    <li>Mesotherapy</li>
-                    <li>Laser Hair Removal</li>
-                    <li>Tattoo Removal</li>
-                    <li>Mole Removal</li>
-                    <li>Skin & Hair Problems</li>
-                    <li>Anti-Aging Treatments</li>
-                    <li>Skin Rejuvenation</li>
-                </ul>
-            </div>
-        </div>
+        <div class="container">
+            <span class="eyebrow">What We Offer</span>
+            <h2 class="section-title">Our Treatments</h2>
+            <p class="section-subtitle">Complete dental and cosmetic care for the whole family.</p>
 
-        <div class="services-grid" style="margin-top: 3rem;">
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Teeth Whitening</h3>
-                <p>Professional whitening treatments for a brighter, more confident smile. Safe and effective results in just one session.</p>
+            <div class="service-tabs">
+                <div class="category-card dental">
+                    <h3>🦷 Dental Care</h3>
+                    <ul>
+                        <li>Teeth Whitening</li>
+                        <li>Teeth Cleaning &amp; Polishing</li>
+                        <li>Dental Implants</li>
+                        <li>Root Canal Treatment</li>
+                        <li>Crowns &amp; Fixed Bridges</li>
+                        <li>Dentures</li>
+                        <li>Braces &amp; Aligners</li>
+                        <li>Tooth Fillings</li>
+                        <li>Tooth Extraction</li>
+                        <li>Child Dentistry</li>
+                    </ul>
+                </div>
+                <div class="category-card cosmetic">
+                    <h3>✨ Skin, Hair &amp; Laser</h3>
+                    <ul>
+                        <li>Hydrafacial</li>
+                        <li>Chemical Peels</li>
+                        <li>Micro Needling</li>
+                        <li>Mesotherapy</li>
+                        <li>Laser Hair Removal</li>
+                        <li>Tattoo Removal</li>
+                        <li>Mole Removal</li>
+                        <li>Skin &amp; Hair PRP</li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🦷</div>
-                <h3>Dental Implants</h3>
-                <p>Permanent solution for missing teeth. Natural-looking and long-lasting dental implants with advanced technology.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">😁</div>
-                <h3>Clear Aligners & Braces</h3>
-                <p>Invisible braces for perfect teeth alignment. Comfortable, removable, and effective orthodontic treatment.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🏥</div>
-                <h3>Root Canal Treatment</h3>
-                <p>Pain-free root canal treatment with advanced technology. Save your natural teeth with expert care.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">💆‍♀️</div>
-                <h3>Hydrafacial</h3>
-                <p>Deep cleansing and rejuvenating facial treatment. Get glowing, healthy skin with our advanced hydrafacial therapy.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">💫</div>
-                <h3>Laser Hair Removal</h3>
-                <p>Permanent hair reduction with safe laser technology. Say goodbye to unwanted hair forever.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">✨</div>
+                    <h3>Teeth Whitening &amp; Cleaning</h3>
+                    <p>Remove stains and tartar for a brighter, fresher smile.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🦷</div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent, natural-looking replacement for missing teeth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">😁</div>
+                    <h3>Braces &amp; Aligners</h3>
+                    <p>Straighten your teeth with comfortable orthodontic options.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🩺</div>
+                    <h3>Root Canal Treatment</h3>
+                    <p>Save your natural tooth with careful, comfortable treatment.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💆‍♀️</div>
+                    <h3>Hydrafacial &amp; Peels</h3>
+                    <p>Deep cleansing and glow-boosting treatments for healthier skin.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💫</div>
+                    <h3>Laser Hair Removal</h3>
+                    <p>Long-lasting hair reduction using laser technology.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose" id="about">
-        <h2 class="section-title">Why Choose Dr. Ishani's Clinic?</h2>
-        <p class="section-subtitle">We're committed to excellence in dental and cosmetic care</p>
-        
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">👩‍⚕️</div>
-                <h3>Expert Doctor</h3>
-                <p>Dr. Ishani Nilajkar - Qualified Dental Surgeon & Cosmetologist with years of experience</p>
-            </div>
-            
-            <div class="feature-item">
-                <div class="feature-icon">🔬</div>
-                <h3>Advanced Technology</h3>
-                <p>State-of-the-art equipment for precise diagnosis and comfortable treatment</p>
-            </div>
-            
-            <div class="feature-item">
-                <div class="feature-icon">🛡️</div>
-                <h3>Safety & Hygiene</h3>
-                <p>Strict sterilization protocols and infection control measures for your safety</p>
-            </div>
-            
-            <div class="feature-item">
-                <div class="feature-icon">💳</div>
-                <h3>Affordable Care</h3>
-                <p>Transparent pricing with 0% EMI options. Quality care accessible to everyone</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">🏢</div>
-                <h3>Modern Facility</h3>
-                <p>Brand new, well-equipped clinic in prime location with comfortable environment</p>
-            </div>
-            
-            <div class="feature-item">
-                <div class="feature-icon">⏰</div>
-                <h3>Flexible Timings</h3>
-                <p>Open daily from 10 AM to 9 PM for your convenience</p>
+    <!-- Clinic Gallery (hides itself if images are not uploaded) -->
+    <section class="gallery optional-section" id="gallery">
+        <div class="container">
+            <span class="eyebrow">Our Space</span>
+            <h2 class="section-title">A Clean, Modern Clinic</h2>
+            <p class="section-subtitle">Comfortable, hygienic and equipped for your care.</p>
+            <div class="gallery-grid">
+                <figure><img src="images/clinic-exterior.jpg" alt="Dr. Ishani's clinic entrance, Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="images/reception.jpg" alt="Clinic reception area" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="images/equipment.jpg" alt="Modern dental chair and equipment" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <h2 class="section-title">What Our Patients Say</h2>
-        <p class="section-subtitle">Real stories from real patients</p>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p class="testimonial-text">"Amazing experience! Dr. Ishani is very professional and caring. My teeth whitening results are fantastic. The clinic is beautiful and hygienic."</p>
-                <p class="testimonial-author">Priya Sharma</p>
-                <p class="testimonial-location">Dharampeth, Nagpur</p>
+    <!-- Before / After (hides itself if images are not uploaded) -->
+    <section class="results optional-section" id="results">
+        <div class="container">
+            <span class="eyebrow">Our Work</span>
+            <h2 class="section-title">Real Results</h2>
+            <p class="section-subtitle">Treatments completed at our Dharampeth clinic.</p>
+            <div class="results-grid">
+                <figure><img src="images/before-after-1.jpg" alt="Before and after dental treatment - Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="images/before-after-2.jpg" alt="Before and after teeth cleaning - Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
             </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p class="testimonial-text">"Got my dental implant done here. Painless procedure and excellent aftercare. Dr. Ishani explained everything clearly. Highly recommend!"</p>
-                <p class="testimonial-author">Rajesh Kumar</p>
-                <p class="testimonial-location">Civil Lines, Nagpur</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p class="testimonial-text">"Took my daughter for her first dental visit. Dr. Ishani was so gentle and patient. The clinic atmosphere is very welcoming for kids!"</p>
-                <p class="testimonial-author">Anjali Desai</p>
-                <p class="testimonial-location">Sitabuldi, Nagpur</p>
+            <p class="results-note">Results vary from person to person. Shared with patient consent.</p>
+        </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="why" id="why">
+        <div class="container">
+            <span class="eyebrow">Why Us</span>
+            <h2 class="section-title">Why Patients Choose Us</h2>
+            <p class="section-subtitle">Care that is gentle, clear and convenient.</p>
+            <div class="features-grid">
+                <div class="feature"><div class="icon">👩‍⚕️</div><h3>Qualified Doctor</h3><p>BDS dental surgeon with a Diploma in Clinical Cosmetology.</p></div>
+                <div class="feature"><div class="icon">🏥</div><h3>One Clinic, All Care</h3><p>Dental, implant, skin, hair and laser treatments in one place.</p></div>
+                <div class="feature"><div class="icon">🛡️</div><h3>Hygiene First</h3><p>Strict sterilisation and infection-control practices.</p></div>
+                <div class="feature"><div class="icon">💬</div><h3>Clear Advice</h3><p>You know the plan and the cost before treatment begins.</p></div>
+                <div class="feature"><div class="icon">📍</div><h3>Easy to Reach</h3><p>Central Dharampeth location near Traffic Park Square.</p></div>
+                <div class="feature"><div class="icon">⏰</div><h3>Open 10 AM – 9 PM</h3><p>Late hours, every day of the week.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <span class="eyebrow">Simple Process</span>
+            <h2 class="section-title">Book in 4 Easy Steps</h2>
+            <p class="section-subtitle">No long waiting, no confusion.</p>
+            <div class="steps">
+                <div class="step"><div class="num">1</div><h3>Message Us</h3><p>Tap the WhatsApp button and tell us what you need.</p></div>
+                <div class="step"><div class="num">2</div><h3>Pick a Time</h3><p>We confirm a slot that suits you between 10 AM and 9 PM.</p></div>
+                <div class="step"><div class="num">3</div><h3>Consultation</h3><p>Dr. Ishani examines you and explains your options clearly.</p></div>
+                <div class="step"><div class="num">4</div><h3>Treatment</h3><p>Comfortable care with proper follow-up.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="review-box">
+                <div class="stars">★★★★★</div>
+                <h3>Rated 5 Stars on Google</h3>
+                <p>Our patients' words say it best. Read their reviews, or share your own experience after your visit.</p>
+                <!-- Replace # with your Google Business review link -->
+                <a href="https://www.google.com/search?q=Dr.+Ishani%27s+Dental+%26+Cosmetic+Clinic+Dharampeth+Nagpur+reviews" class="btn btn-primary" target="_blank" rel="noopener">⭐ See Google Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="eyebrow">FAQ</span>
+            <h2 class="section-title">Common Questions</h2>
+            <p class="section-subtitle">Quick answers before you visit.</p>
+            <div class="faq-list">
+                <details>
+                    <summary>What are your clinic timings?</summary>
+                    <p>We are open every day from 10 AM to 9 PM. Booking in advance on WhatsApp helps us keep your waiting time short.</p>
+                </details>
+                <details>
+                    <summary>How do I book an appointment?</summary>
+                    <p>Message us on WhatsApp at +91 70202 32838, or call +91 70573 94624. You can also fill the form on this page and it will open WhatsApp with your details.</p>
+                </details>
+                <details>
+                    <summary>Do you treat both dental and skin or hair problems?</summary>
+                    <p>Yes. Dr. Ishani is a dental surgeon (BDS) with a Diploma in Clinical Cosmetology, so we offer dental care along with hydrafacial, peels, laser hair removal and other skin and hair treatments.</p>
+                </details>
+                <details>
+                    <summary>Do you provide dental implants and braces?</summary>
+                    <p>Yes, we offer dental implants, crowns, bridges, dentures, braces and aligners. After an examination, Dr. Ishani will suggest the best option for you.</p>
+                </details>
+                <details>
+                    <summary>Do you treat children?</summary>
+                    <p>Yes, we provide child dentistry in a gentle, friendly way.</p>
+                </details>
+                <details>
+                    <summary>Where is the clinic located?</summary>
+                    <p>Shop no 383, near Shyam Medical, Traffic Park Square, Dharampeth, Nagpur, Maharashtra 440010.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section class="contact" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Book your free consultation today</p>
-        
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <h3>Visit Us</h3>
-                        <p>Shop no 383, near Shyam Medical<br>Traffic Park Square, Dharampeth<br>Nagpur, Maharashtra 440010</p>
+        <div class="container">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Visit or Book Online</h2>
+            <p class="section-subtitle">We would be happy to see you at the clinic.</p>
+
+            <div class="contact-grid">
+                <div class="info-card">
+                    <div class="contact-item">
+                        <div class="ic">📍</div>
+                        <div><h3>Address</h3><p>Shop no 383, near Shyam Medical,<br>Traffic Park Square, Dharampeth,<br>Nagpur, Maharashtra 440010</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="ic">📞</div>
+                        <div><h3>Phone</h3>
+                            <p><a href="tel:+917020232838">+91 70202 32838</a> (WhatsApp)<br>
+                            <a href="tel:+917057394624">+91 70573 94624</a></p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="ic">📧</div>
+                        <div><h3>Email</h3><p><a href="mailto:drishanidentalclinic@gmail.com">drishanidentalclinic@gmail.com</a></p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="ic">⏰</div>
+                        <div><h3>Hours</h3><p><strong>Daily: 10:00 AM – 9:00 PM</strong></p></div>
+                    </div>
+                    <div class="map-wrap">
+                        <iframe
+                            title="Map - Dr. Ishani's Dental Clinic, Dharampeth Nagpur"
+                            src="https://www.google.com/maps?q=Traffic+Park+Square+Dharampeth+Nagpur+440010&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div>
-                        <h3>Call Us</h3>
-                        <p><a href="tel:+917020232838" style="color: var(--text); text-decoration: none;">+91 70202 32838</a> (WhatsApp)<br>
-                        <a href="tel:+917057394624" style="color: var(--text); text-decoration: none;">+91 70573 94624</a></p>
+
+                <form class="form-card" id="contactForm">
+                    <h3>Request an Appointment</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required>
                     </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div>
-                        <h3>Email Us</h3>
-                        <p><a href="mailto:drishanidentalclinic@gmail.com" style="color: var(--text); text-decoration: none;">drishanidentalclinic@gmail.com</a></p>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
                     </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">⏰</div>
-                    <div>
-                        <h3>Working Hours</h3>
-                        <p><strong>Daily: 10:00 AM - 9:00 PM</strong><br>All Days Open</p>
+                    <div class="form-group">
+                        <label for="service">Treatment Needed</label>
+                        <select id="service">
+                            <option value="General Consultation">General Consultation</option>
+                            <option value="Teeth Cleaning / Whitening">Teeth Cleaning / Whitening</option>
+                            <option value="Dental Implant">Dental Implant</option>
+                            <option value="Braces / Aligners">Braces / Aligners</option>
+                            <option value="Root Canal">Root Canal</option>
+                            <option value="Crown / Bridge / Denture">Crown / Bridge / Denture</option>
+                            <option value="Child Dentistry">Child Dentistry</option>
+                            <option value="Hydrafacial / Skin Treatment">Hydrafacial / Skin Treatment</option>
+                            <option value="Laser Hair Removal">Laser Hair Removal</option>
+                            <option value="Hair Treatment / PRP">Hair Treatment / PRP</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Message (optional)</label>
+                        <textarea id="message" placeholder="Tell us briefly about your concern..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-wa" style="width:100%;">💬 Send &amp; Book on WhatsApp</button>
+                </form>
             </div>
-            
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" required
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Tell us about your dental needs..."></textarea>
-                </div>
-                
-                <button type="submit" class="cta-btn" style="width: 100%;">Book Appointment</button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Dr. Ishani's Dental Clinic</h3>
-                <p>Your trusted partner for comprehensive dental and cosmetic care in Nagpur. Creating beautiful smiles with expertise and care.</p>
-                <p style="margin-top: 1rem;"><strong>Dr. Ishani Nilajkar </strong><br>Dental Surgeon & Cosmetologist</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Dr. Ishani's Dental &amp; Cosmetic Clinic</h3>
+                    <p>Dental, implant, skin, hair and laser care in Dharampeth, Nagpur.</p>
+                    <p style="margin-top:0.8rem;"><strong>Dr. Ishani Nilajkar</strong><br>BDS, MBA, Diploma in Clinical Cosmetology</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About the Doctor</a></li>
+                        <li><a href="#services">Treatments</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Dental</h3>
+                    <ul>
+                        <li><a href="#services">Dental Implants</a></li>
+                        <li><a href="#services">Braces &amp; Aligners</a></li>
+                        <li><a href="#services">Root Canal</a></li>
+                        <li><a href="#services">Teeth Whitening</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Skin, Hair &amp; Laser</h3>
+                    <ul>
+                        <li><a href="#services">Hydrafacial</a></li>
+                        <li><a href="#services">Laser Hair Removal</a></li>
+                        <li><a href="#services">Chemical Peels</a></li>
+                        <li><a href="#services">Hair &amp; Skin PRP</a></li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#testimonials">Patient Reviews</a></li>
-                    <li><a href="#contact">Book Appointment</a></li>
-                </ul>
+            <div class="footer-bottom">
+                &copy; 2026 Dr. Ishani's Dental &amp; Cosmetic Clinic, Nagpur. All rights reserved.
             </div>
-            
-            <div class="footer-section">
-                <h3>Dental Services</h3>
-                <ul>
-                    <li><a href="#services">Dental Implants</a></li>
-                    <li><a href="#services">Clear Aligners & Braces</a></li>
-                    <li><a href="#services">Root Canal Treatment</a></li>
-                    <li><a href="#services">Teeth Whitening</a></li>
-                    <li><a href="#services">Crown & Bridges</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Cosmetic Services</h3>
-                <ul>
-                    <li><a href="#services">Hydrafacial</a></li>
-                    <li><a href="#services">Laser Hair Removal</a></li>
-                    <li><a href="#services">Chemical Peels</a></li>
-                    <li><a href="#services">Mesotherapy</a></li>
-                    <li><a href="#services">Skin & Hair Treatments</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Dr. Ishani's Dental and Cosmetic Clinic, Nagpur. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Mobile menu
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('active')));
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                navLinks.classList.remove('active');
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // WhatsApp Popup
-        let popupShown = false;
-        const whatsappPopup = document.getElementById('whatsappPopup');
-        
-        // Show popup after 5 seconds
-        setTimeout(() => {
-            if (!popupShown) {
-                whatsappPopup.classList.add('show');
-                popupShown = true;
-                
-                // Auto-hide after 10 seconds
-                setTimeout(() => {
-                    whatsappPopup.classList.remove('show');
-                }, 10000);
-            }
-        }, 5000);
-
-        // Show popup on scroll (after 30% of page)
-        window.addEventListener('scroll', () => {
-            if (!popupShown && window.scrollY > document.body.scrollHeight * 0.3) {
-                whatsappPopup.classList.add('show');
-                popupShown = true;
-                
-                setTimeout(() => {
-                    whatsappPopup.classList.remove('show');
-                }, 10000);
-            }
-        });
-
-        function closePopup() {
-            whatsappPopup.classList.remove('show');
+        // WhatsApp popup: show once per visit
+        const popup = document.getElementById('waPopup');
+        let popupShown = sessionStorage.getItem('waPopupShown') === '1';
+        function showPopup() {
+            if (popupShown) return;
+            popupShown = true;
+            try { sessionStorage.setItem('waPopupShown', '1'); } catch (e) {}
+            popup.classList.add('show');
+            setTimeout(() => popup.classList.remove('show'), 15000);
         }
+        function closePopup() { popup.classList.remove('show'); }
+        setTimeout(showPopup, 6000);
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > document.body.scrollHeight * 0.3) showPopup();
+        }, { passive: true });
 
-        // Form submission
+        // Contact form -> WhatsApp
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value || 'Appointment request';
-            
-            // Redirect to WhatsApp with form data
-            const whatsappMessage = `Hello Dr. Ishani's Dental Clinic,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(message)}%0A%0AI would like to book an appointment.`;
-            window.open(`https://wa.me/917020232838?text=${whatsappMessage}`, '_blank');
-            
-            alert('Redirecting to WhatsApp to confirm your appointment!');
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const msg = document.getElementById('message').value.trim() || '-';
+            const text =
+                "Hello Dr. Ishani's Dental Clinic,\n\n" +
+                "Name: " + name + "\n" +
+                "Phone: " + phone + "\n" +
+                "Treatment: " + service + "\n" +
+                "Message: " + msg + "\n\n" +
+                "I would like to book an appointment.";
+            if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'website_form' });
+            window.open('https://wa.me/917020232838?text=' + encodeURIComponent(text), '_blank');
             e.target.reset();
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        // Track WhatsApp / call clicks in Google Analytics
+        document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]').forEach(a => {
+            a.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', a.href.startsWith('tel:') ? 'call_click' : 'whatsapp_click', { link_url: a.href });
                 }
             });
-        }, observerOptions);
+        });
 
-        document.querySelectorAll('.service-card, .feature-item, .testimonial-card, .category-card').forEach(el => {
+        // Hide gallery / results sections if no image loaded
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.optional-section').forEach(sec => {
+                const imgs = Array.from(sec.querySelectorAll('img'));
+                const anyLoaded = imgs.some(img => img.complete && img.naturalWidth > 0);
+                if (!anyLoaded) sec.style.display = 'none';
+            });
+        });
+
+        // Scroll reveal
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    en.target.style.opacity = '1';
+                    en.target.style.transform = 'translateY(0)';
+                    io.unobserve(en.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.service-card, .feature, .step, .category-card, .cred-list li').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+            el.style.transition = 'opacity .6s ease, transform .6s ease';
+            io.observe(el);
         });
     </script>
 </body>
 </html>
-
