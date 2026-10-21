@@ -17,6 +17,7 @@
     <meta property="og:title" content="Dr. Ishani's Dental & Cosmetic Clinic - Dharampeth, Nagpur">
     <meta property="og:description" content="Dental, implant, skin, hair and laser care under one roof. Book on WhatsApp.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="clinic-exterior.jpg">
     <meta name="theme-color" content="#0284C7">
 
     <!-- Local business data for Google -->
@@ -25,7 +26,7 @@
       "@context": "https://schema.org",
       "@type": "Dentist",
       "name": "Dr. Ishani's Dental & Cosmetic Clinic",
-      "image": "images/clinic-exterior.jpg",
+      "image": "clinic-exterior.jpg",
       "telephone": "+917020232838",
       "email": "drishanidentalclinic@gmail.com",
       "address": {
@@ -441,8 +442,6 @@
         /* Mobile action bar */
         .mobile-bar { display: none; }
 
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-
         /* Responsive */
         @media (max-width: 900px) {
             .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
@@ -520,7 +519,7 @@
     <header>
         <nav>
             <a href="#home" class="logo">
-                <img src="images/logo.png" alt="Dr. Ishani's Dental & Cosmetic Clinic logo" onerror="this.style.display='none'">
+                <img src="logo.png" alt="Dr. Ishani's Dental & Cosmetic Clinic logo" onerror="this.style.display='none'">
                 <span class="logo-text">Dr. Ishani's<small>DENTAL &amp; COSMETIC CLINIC</small></span>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -554,7 +553,7 @@
                 </div>
             </div>
             <div class="hero-photo">
-                <img src="images/doctor.jpg" alt="Dr. Ishani Nilajkar - Dental Surgeon and Cosmetologist, Nagpur">
+                <img src="Doctor.png" alt="Dr. Ishani Nilajkar - Dental Surgeon and Cosmetologist, Nagpur">
                 <div class="tag">
                     <strong>Dr. Ishani Nilajkar</strong>
                     <span>Dental Surgeon &amp; Cosmetologist</span>
@@ -579,7 +578,7 @@
     <section class="about" id="about">
         <div class="container about-grid">
             <div class="about-photo">
-                <img src="images/doctor.jpg" alt="Dr. Ishani Nilajkar at her clinic in Dharampeth, Nagpur" loading="lazy">
+                <img src="Doctor.png" alt="Dr. Ishani Nilajkar at her clinic in Dharampeth, Nagpur" loading="lazy">
             </div>
             <div class="about-text">
                 <span class="eyebrow" style="text-align:left;">Meet Your Doctor</span>
@@ -670,29 +669,29 @@
         </div>
     </section>
 
-    <!-- Clinic Gallery (hides itself if images are not uploaded) -->
+    <!-- Clinic Gallery -->
     <section class="gallery optional-section" id="gallery">
         <div class="container">
             <span class="eyebrow">Our Space</span>
             <h2 class="section-title">A Clean, Modern Clinic</h2>
             <p class="section-subtitle">Comfortable, hygienic and equipped for your care.</p>
             <div class="gallery-grid">
-                <figure><img src="images/clinic-exterior.jpg" alt="Dr. Ishani's clinic entrance, Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
-                <figure><img src="images/reception.jpg" alt="Clinic reception area" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
-                <figure><img src="images/equipment.jpg" alt="Modern dental chair and equipment" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="clinic-exterior.jpg" alt="Dr. Ishani's clinic entrance, Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="reception.jpg" alt="Clinic reception area" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="equipment.jpg" alt="Modern dental chair and equipment" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
             </div>
         </div>
     </section>
 
-    <!-- Before / After (hides itself if images are not uploaded) -->
+    <!-- Before / After -->
     <section class="results optional-section" id="results">
         <div class="container">
             <span class="eyebrow">Our Work</span>
             <h2 class="section-title">Real Results</h2>
             <p class="section-subtitle">Treatments completed at our Dharampeth clinic.</p>
             <div class="results-grid">
-                <figure><img src="images/before-after-1.jpg" alt="Before and after dental treatment - Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
-                <figure><img src="images/before-after-2.jpg" alt="Before and after teeth cleaning - Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="before-after-1.jpg" alt="Before and after dental treatment - Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+                <figure><img src="before-after-2.jpg" alt="Before and after teeth cleaning - Dharampeth Nagpur" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
             </div>
             <p class="results-note">Results vary from person to person. Shared with patient consent.</p>
         </div>
@@ -737,7 +736,7 @@
                 <div class="stars">★★★★★</div>
                 <h3>Rated 5 Stars on Google</h3>
                 <p>Our patients' words say it best. Read their reviews, or share your own experience after your visit.</p>
-                <!-- Replace # with your Google Business review link -->
+                <!-- Tip: replace this link with your Google Business "Ask for reviews" link -->
                 <a href="https://www.google.com/search?q=Dr.+Ishani%27s+Dental+%26+Cosmetic+Clinic+Dharampeth+Nagpur+reviews" class="btn btn-primary" target="_blank" rel="noopener">⭐ See Google Reviews</a>
             </div>
         </div>
@@ -902,7 +901,8 @@
 
         // WhatsApp popup: show once per visit
         const popup = document.getElementById('waPopup');
-        let popupShown = sessionStorage.getItem('waPopupShown') === '1';
+        let popupShown = false;
+        try { popupShown = sessionStorage.getItem('waPopupShown') === '1'; } catch (e) {}
         function showPopup() {
             if (popupShown) return;
             popupShown = true;
